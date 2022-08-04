@@ -1,13 +1,143 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    background-color: rgb(255, 243, 220);
+}
+
+.login-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container-all {
+    width: 70%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-layout {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}
+
+.layout-header {
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.container-links {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    display: flex;
+    align-items: flex-end;
+    color: black;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+}
+
+a:hover {
+    border-bottom: 5px solid orange;
+}
+
+.container-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-inbox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inbox-item {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(174, 174, 174);
+    padding-bottom: 10px;
+}
+
+.inbox-item:hover>p {
+    background-color: rgb(255, 222, 161);
+}
+
+.left-text {
+    width: 15%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mid-text {
+    width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.right-text {
+    width: 20%;
+    text-align: right;
+}
+
+em {
+    font-style: normal;
+    color: gray;
+}
+
+.container-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-new-email {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    resize: none;
+}
+
+.send-button {
+    padding: 5px 0;
+    cursor: pointer;
 }
